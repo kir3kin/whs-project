@@ -1,0 +1,15 @@
+{
+  "name": "whsportfolio",
+  "version": "1.0.0",
+  "description": "webpack+html+scss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Akhabanin <i.akhabanin@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
