@@ -1,0 +1,5 @@
+
+h1 {
+	font-style: $font-size;
+	@include correct-font($font-family--headers, "bold")
+}

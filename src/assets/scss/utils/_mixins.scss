@@ -1,0 +1,23 @@
+@use "sass:map";
+
+@mixin btn($color) {
+	background-color: $color;
+	box-shadow: 0 7px 17px -10px rgba($color, .2);
+
+	&:focus,
+	&:hover {
+		background-color: darken($color, 10%);
+	}
+}
+
+@mixin breakpoint($bp) {
+	@media (max-width: $bp) {
+		@content;
+	}
+}
+
+$font-weights: ("light": 300, "bold": 600);
+@mixin correct-font($family, $weight) {
+	font-family: $family;
+	font-weight: map.get($font-weights, $weight);
+}
