@@ -3,28 +3,9 @@
 @import './fonts/fonts.css';
 @import '~reset-scss';
 
-// for rem
-html {
-	font-size: 62.5%;
-}
-
-body {
-	font-family: Roboto;
-	font-size: 1.4rem;
-	line-height: 1.5;
-	color: $text-prim;
-}
-
-*,
-*:after,
-*:before {
-	box-sizing: border-box;
-}
-
-
 /* Blocks */
-@import 'modules/page';
-@import 'modules/header';
+@import 'blocks/page';
+@import 'blocks/header/header';
 // @import 'blocks/page';
 // @import 'blocks/nav';
 // @import 'blocks/burger';
@@ -32,9 +13,3 @@ body {
 // @import 'blocks/search';
 // @import 'blocks/sidebar';
 // @import 'blocks/profile';
-
-.wrapper {
-	width: 500px;
-	height: 500px;
-	background-color: $btn-ban;
-}

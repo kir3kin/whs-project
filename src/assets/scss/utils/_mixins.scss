@@ -16,8 +16,8 @@
 	}
 }
 
-$font-weights: ("light": 300, "bold": 600);
-@mixin correct-font($family, $weight) {
+@mixin set-font($size, $family, $weight) {
+	font: $size $weight $family;
 	font-family: $family;
 	font-weight: map.get($font-weights, $weight);
 }

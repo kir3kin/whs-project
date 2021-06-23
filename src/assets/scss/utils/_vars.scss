@@ -5,6 +5,7 @@ $container-size: 820px;
 // Font families
 $font-family: 'myriad-pro', 'Menlo', monospace;
 $font-family--headers: 'segoe-wp', Arial, Helvetica;
+$font-weights: ("light": 300, "regular": 400, "bold": 700);
 
 // Text sizes
 $font-size: 1.4rem;
@@ -22,12 +23,9 @@ $footer-size--header: 2.2rem;
 $footer-size--list: 1.3rem;
 
 // Text colors
-$primary: #fff;
-$tab-color--btn: #616161;
-
-
-
-$text-prim: #828282;
+$header-color: #fff;
+$main-color--tabs: #616161;
+$main-color--text: #828282;
 
 // Main blocks' colors
 $why-us-list: #E67624;
