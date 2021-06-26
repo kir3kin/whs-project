@@ -1,0 +1,24 @@
+.footer {
+	background-image: url('../images/footer/footer-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: $footer-size--list;
+	font-weight: lighter;
+	color: darken($header-color, 30%);
+
+	&__body {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding: 3rem 0 3.5rem;
+	}
+	
+	&__about:first-child {
+		margin-left: 3.5rem;
+	}
+
+
+	// &__item {
+	// 	margin: 0 2rem;
+	// }
+}

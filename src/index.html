@@ -9,167 +9,227 @@
 <body>
 	<div class="site-container">
 		<header class="header">
-			<div class="container">
+			<div class="header__wrap container">
 
-				<!-- logo -->
-				<a href="" class="header__logo logo"></a>
-				<!-- navigation -->
-				<ul class="header__nav nav">
-					<li class="nav__item"><a href="#">Solutions</a></li>
-					<li class="nav__item"><a href="#">Products</a></li>
-					<li class="nav__item"><a href="#">Portfolio</a></li>
-					<li class="nav__item"><a href="#">Contact</a></li>
-				</ul>
-				<!-- slider(banner) -->
-				<div class="header__slider main-slider">
-					<div class="slider-container">
-	
-						<div class="main-slider__img"></div>
-						<div class="main-slider__desc">
-							<h3 class="main-slider__title"></h3>
-							<h4 class="main-slider__text"></h4>
-							<a class="main-slider__button" href="#">Try now</a>
+					<div class="header__row">
+						<!-- logo -->
+						<div class="header__logo logo">
+							<a href="#"></a>
 						</div>
-	
+						<!-- navigation -->
+						<nav class="header__nav nav">
+							<a class="nav__item" href="#">Solutions</a>
+							<a class="nav__item" href="#">Products</a>
+							<a class="nav__item" href="#">Portfolio</a>
+							<a class="nav__item" href="#">Contact</a>
+						</nav>
 					</div>
-				</div>
-				<!-- ./slider(banner) -->
-			</div><!-- ./container -->
-			
+					<!-- main-slider(banner) -->
+					<div class="header__slider main-slider">
+						<!-- slider-butns -->
+						<div class="slider-contrl">
+							<div id='slider-btn-left' class="slider-contrl__btn slider-contrl__btn--left"></div>
+							<div id='slider-btn-rigth' class="slider-contrl__btn slider-contrl__btn--right"></div>
+						</div>
+						<!-- ./slider-butns -->
+						<!-- main-slider__slide -->
+						<div class="main-slider__wrap">
+							<!-- slider-slide -->
+							<div class="slider-slide">
+								<img src="~images/header/slider/slide-1.png" class="slider-slide__img">
+								<div class="slider-slide__desc">
+									<h3 class="slider-slide__title">Introducing</h3>
+									<h4 class="slider-slide__subtitle">Something hot...</h4>
+									<button class="slider-slide__button" id="demo">Try demo</button>
+								</div>
+							</div>
+							<!-- ./slider-slide -->
+						</div>
+						<!-- main-slider__slide -->
+					</div>
+					<!-- ./main-slider(banner) -->
+			</div>
+			<!-- ./header-wrap ./container  -->
 		</header>
 		<main>
-
 			<div class="container">
+
 				<!-- tabs-block -->
-				<section class="tabs-block">
-					<ul class="tabs-block__btns">
-						<li class="tabs-block__item tab-item">
-							<div class="tab-item__btn"></div>
-							<div class="tab-item__content">
-								<div class="tab-item__image"></div>
-								<h4 class="tab-item__header"></h4>
-								<div class="tab-item__text"></div>
+				<section class="main__tabs tabs">
+
+					<!-- tabs__row || control btn -->
+					<div class="tabs__row">
+						<div class="tabs__column">
+							<div class="tab-btn">
+								<div class="tab-btn__icon">
+									<img src="~images/tabs/btns/tab-1.png" alt="tab-1.png">
+								</div>
+								<div class="tab-btn__title">Responsive Websites</div>
 							</div>
-						</li><!-- ./tabs-block__item ./tab-item-->
-						<li class="tabs-block__item tab-item">
-							<div class="tab-item__btn"></div>
-							<div class="tab-item__content">
-								<div class="tab-item__image"></div>
-								<h4 class="tab-item__header"></h4>
-								<div class="tab-item__text"></div>
+						</div>
+						<div class="tabs__column">
+							<div class="tab-btn tab-btn--active">
+								<div class="tab-btn__icon">
+									<img src="~images/tabs/btns/tab-2.png" alt="tab-2.png">
+								</div>
+								<div class="tab-btn__title">e Commerce
+									Websites</div>
 							</div>
-						</li><!-- ./tabs-block__item ./tab-item-->
-						<li class="tabs-block__item tab-item">
-							<div class="tab-item__btn"></div>
-							<div class="tab-item__content">
-								<div class="tab-item__image"></div>
-								<h4 class="tab-item__header"></h4>
-								<div class="tab-item__text"></div>
+						</div>
+						<div class="tabs__column">
+							<div class="tab-btn">
+								<div class="tab-btn__icon">
+									<img src="~images/tabs/btns/tab-3.png" alt="tab-3.png">
+								</div>
+								<div class="tab-btn__title">Daily Blog
+									Websites</div>
 							</div>
-						</li><!-- ./tabs-block__item ./tab-item-->
-						<li class="tabs-block__item tab-item">
-							<div class="tab-item__btn"></div>
-							<div class="tab-item__content">
-								<div class="tab-item__image"></div>
-								<h4 class="tab-item__header"></h4>
-								<div class="tab-item__text"></div>
+						</div>
+						<div class="tabs__column">
+							<div class="tab-btn">
+								<div class="tab-btn__icon">
+									<img src="~images/tabs/btns/tab-4.png" alt="tab-4.png">
+								</div>
+								<div class="tab-btn__title">Search based
+									Websites</div>
 							</div>
-						</li><!-- ./tabs-block__item ./tab-item-->
-					</ul>
+						</div>
+					</div>
+					<!-- ./tabs__row || control btn -->
+
+					<!-- tabs__body -->
+					<div class="tabs__body">
+						<!-- tab-context 1 -->
+						<div class="tab-context tab-context--active">
+							<div class="tab-context__img">
+								<img src="~images/tabs/context/tab-ipad.png" alt="">
+							</div>
+							<h4 class="tab-context__title">Lorem Ipsum is simply dummy text </h4>
+							<div class="tab-context__text">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+								<p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							</div>
+						</div>
+						<!-- ./tab-context 1 -->
+					</div>
+					<!-- ./tabs__body -->
 				</section>
-				<!-- ./tabs-block -->
+
 			</div><!-- ./container -->
-			
 			<div class="container">
 				<!-- choose-us -->
 				<section class="choose-us">
-					<div class="choose-us__img"></div>
-					<div class="ul choose-us__list list">
+					<div class="choose-us__img">
+						<img src="~images/why-us/why-us.jpg" class="choose-us__img">
+					</div>
+					<div class="choose-us__list list">
 						<h3 class="list__header">Why choose us ?</h3>
-						<li class="list__item"></li>
-						<li class="list__item"></li>
-						<li class="list__item"></li>
-						<li class="list__item"></li>
-						<li class="list__item"></li>
-						<li class="list__item"></li>
+						<li class="list__item">Lorem Ipsum is simply dummy text of the printing</li>
+						<li class="list__item">Lorem Ipsum is simply dummy text of the printing</li>
+						<li class="list__item">When an unknown printer took a galley of type</li>
+						<li class="list__item">It has survived not only five centuries, but</li>
+						<li class="list__item">It was popularised in the 1960s Lorem ipsum dolorsit amet consectetur adipisicing elit.</li>
+						<li class="list__item">More recently with desktop publishing software</li>
 					</div>
 				</section>
 				<!-- ./choose-us -->
 			</div><!-- ./container -->
 
-			<div class="container">
-				<!-- login-subscribe -->
-				<section class="login-subscribe">
-						<!-- login-form -->
-					<form class="login-form">
-						<h4 class="login-form__header"></h4>
-						<div class="login-form__content">
-							<input type="text" name="" id="" class="login-form__name">
-							<input type="password" name="" id="" class="login-form__pass">
-							<button type="submit" class="login-form__submit"></button>
-						</div><!-- ./login-form__content -->
-					</form>
-					<!-- ./login-form -->
-	
-					<!-- subs-form -->
-					<form class="subs-form">
-						<h4 class="subs-form__header"></h4>
-						<div class="subs-form__content">
-							<input type="email" name="" id="" class="subs-form__email">
-							<button type="submit" class="subs-form__btn"></button>
-						</div><!-- ./subs-form__content -->
-					</form>
-					<!-- ./subs-form -->
-				</section>
-				<!-- ./login-subscribe -->
-			</div><!-- ./container -->
+			<!-- login-subs -->
+			<section class="login-subs">
+				<div class="container">
+					<!-- login-subs__forms -->
+					<div class="login-subs__forms">
+							<!-- login-form -->
+						<form class="login-form">
+							<h4 class="login-form__header">Member login</h4>
+							<div class="login-form__content">
+								<input type="text" name="" id="" placeholder="User name" class="login-form__name">
+								<input type="password" name="" id="" placeholder="Password" class="login-form__pass">
+								<button type="submit" class="login-form__submit">Log in</button>
+							</div>
+						</form>
+						<!-- ./login-form -->
+		
+						<!-- subs-form -->
+						<form class="subs-form">
+							<h4 class="subs-form__header">Subscribe to our weekly newsletter</h4>
+							<div class="subs-form__content">
+								<input type="email" name="" id="" placeholder="email address" class="subs-form__email">
+								<button type="submit" class="subs-form__submit">Subscribe</button>
+							</div><!-- ./subs-form__content -->
+						</form>
+						<!-- ./subs-form -->
+					</div>
+					<!-- ./login-subs__forms -->
+				</div><!-- ./container -->
+			</section>
+			<!-- ./login-subs -->
 
 		</main>
-		<footer>
+		<footer class="footer">
 			<div class="container">
-				<!-- about-us -->
-				<ul class="footer__about about-us">
-					<h5 class="about-us__title"></h5>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-				</ul>
-				<!-- ./about-us -->
-				<!-- about-us -->
-				<ul class="footer__about">
-					<h5 class="about-us__title"></h5>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-					<li class="about-us__item"></li>
-				</ul>
-				<!-- ./about-us -->
-				<!-- footer__slider -->
-				<div class="footer__slider text-slider">
-					<div class="text-slider__container">
+				<!-- footer__body -->
+				<div class="footer__body">
+					<!-- about-us -->
+					<div class="footer__about about-us">
+						<h5 class="about-us__title">About Us</h5>
+						<ul class="about-us__list">
+							<li class="about-us__item">About Us</li>
+							<li class="about-us__item">Why us</li>
+							<li class="about-us__item">Customer Stories</li>
+							<li class="about-us__item">Press Resources</li>
+							<li class="about-us__item">Press Releases</li>
+							<li class="about-us__item">Contact us</li>
+						</ul>
+					</div>
+					<!-- ./about-us -->
+					<!-- about-us -->
+					<div class="footer__about about-us">
+						<h5 class="about-us__title">About Us</h5>
+						<ul class="about-us__list">
+							<li class="about-us__item">About Us</li>
+							<li class="about-us__item">Why us</li>
+							<li class="about-us__item">Customer Stories</li>
+							<li class="about-us__item">Press Resources</li>
+							<li class="about-us__item">Press Releases</li>
+							<li class="about-us__item">Contact us</li>
+						</ul>
+					</div>
+					<!-- ./about-us -->
+					<!-- ./about-us -->
+					<!-- footer__slider -->
+					<div class="footer__slider text-slider">
+						<div class="text-slider__container">
+	
+							<!-- text-slider__slide -->
+							<div class="text-slider__slide">
 
-						<!-- text-slider__slide -->
-						<div class="text-slider__slide">
-							<div class="testim">
-								<div class="h5 testim__title"></div>
-								<p class="testim__text"></p>
-								<h6 class="testim__desc"></h6>
-								<h6 class="testim__owner"></h6>
-							</div><!-- ./testim -->
+								<div class="slider-contrl">
+									<div class="slider-contrl__btn slider-contrl__btn--left"></div>
+									<div class="slider-contrl__btn slider-contrl__btn--right"></div>
+								</div>
+
+								<div class="testim-slide">
+									<h5 class="testim-slide__title">Testimoanials</h5>
+									<p class="testim-slide__text">Lorem Ipsum is simply dummy text of the printing and 
+										typesetting industry. Lorem Ipsum has been the industr standard dummy text ever since the 1500s, when an unknown printer took a </p>
+									<p class="testim-slide__text"><strong class="testim-slide__desc">Lorem Ipsum is simply</strong></p>
+									<p class="testim-slide__text"><strong class="testim-slide__owner">Owner, Lorem Ipsum</strong></p>
+								</div>
+								<!-- ./testim-slide -->
+							</div>
+							<!-- ./text-slider__slide -->
 						</div>
-						<!-- ./text-slider__slide -->
-
-					</div><!-- ./text-slider__container -->
+						<!-- ./text-slider__container -->
+					</div>
+					<!-- ./footer__slider -->
 					
+					<div class="footer__logo logo logo__footer">
+						<a href="#" class=""></a>
+					</div>
 				</div>
-				<!-- ./footer__slider -->
-				
-				<img src="" alt="" class="footer__logo logo logo--darken">
+				<!-- ./footer__body -->
 			</div><!-- ./container -->
 		</footer>
 	</div><!-- ./site-container -->

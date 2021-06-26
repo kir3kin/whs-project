@@ -1,0 +1,57 @@
+.text-slider {
+	position: relative;
+	
+	/****** Slider's control buttons */
+	.slider-contrl {
+		position: absolute;
+		top: .7rem;
+		right: 5rem;
+	
+		&__btn {
+			background-image: url('../images/footer/text-slider/text-slider--arr.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 50%;
+			width: 1.6rem;
+			height: 1.6rem;
+			opacity: .3;
+		
+			position: absolute;
+			cursor: pointer;
+			transition: opacity .2s linear;
+	
+			&:focus,
+			&:hover {
+				opacity: 1;
+			}
+		
+			&--right {
+				right: 0;
+				transform: rotateY(180deg);
+			}
+	
+			&--left {
+				right: 2.5rem;
+			}
+
+		}
+	}
+	
+	
+	/****** Slider body */
+	.testim-slide {
+		width: 26rem;
+	
+		&__title {
+			@include footer-title($footer-size--header);
+		}
+	
+		&__text {
+			line-height: 1.8;
+	
+			strong {
+				font-weight: bold;
+			}
+		}
+	}
+}

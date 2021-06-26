@@ -1,5 +1,51 @@
 @use "sass:map";
 
+@mixin form-submite($form-color, $input-size) {
+	background-color: $form-color;
+	padding: 1rem 2.5rem 1.5rem;
+	border-radius: 5px;
+	
+	&__header {
+		font-size: $form-size--header;
+		font-weight: 200;
+		color: $header-color;
+		line-height: 1;
+		margin-bottom: 1.5rem;
+	}
+	
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__name, &__pass, &__email {
+		padding: 0.3rem 1rem;
+		width: $input-size;
+		margin-right: 1rem;
+		font-size: $form-size--input;
+	}
+
+	&__submit {
+		padding: 0.5rem 1rem;
+		background-color: $btn-lf;
+		color: $header-color;
+		transition: .2s linear;
+
+		&:focus,
+		&:hover {
+			background-color: darken($btn-lf, 10%);
+			color: $header-nav--focus;
+		}
+	}
+}
+
+@mixin footer-title($title-size) {
+	font-size: $title-size;
+	margin-bottom: 1rem;
+	text-shadow: 1px 1px rgba(255,255,255, .3);
+}
+
+
 @mixin btn($color) {
 	background-color: $color;
 	box-shadow: 0 7px 17px -10px rgba($color, .2);
@@ -10,14 +56,9 @@
 	}
 }
 
+
 @mixin breakpoint($bp) {
 	@media (max-width: $bp) {
 		@content;
 	}
-}
-
-@mixin set-font($size, $family, $weight) {
-	font: $size $weight $family;
-	font-family: $family;
-	font-weight: map.get($font-weights, $weight);
 }

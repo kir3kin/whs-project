@@ -1,0 +1,3 @@
+.login-form {
+	@include form-submite($form-color--login, 12.5rem);
+}

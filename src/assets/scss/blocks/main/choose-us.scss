@@ -1,0 +1,58 @@
+.choose-us {
+	display: flex;
+	flex-flow: row nowrap;
+
+	&__img {
+		width: 36rem;
+		height: 25rem;
+		
+		img {
+			box-shadow: 0 0 7px 2px rgba(0,0,0, .3);
+		}
+	}
+
+	&__list {
+		margin-left: 4rem;
+	}
+}
+
+.list {
+	padding: 1.5rem 0 3rem;
+	list-style: none;
+	overflow: hidden;
+
+	&__header {
+		font: 300 $choose-size--header $font-family--headers;
+		margin-bottom: 1.5rem;
+	}
+
+	&__item {
+		font-size: $choose-size--txt;
+
+		position: relative;
+		padding-left: 2.5rem;
+		margin-bottom: 1rem;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		transition: text-shadow .2s linear;
+
+		&:hover {
+			text-shadow: 0 0 2px rgba($form-color--login, .6)
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 1.5rem;
+			height: 1.5rem;
+			position: absolute;
+			top: .4rem;
+			left: 0;
+			background-image: url('../images/why-us/why-us--list.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+}

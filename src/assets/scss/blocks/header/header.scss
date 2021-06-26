@@ -1,5 +1,23 @@
+.header {
+	background: 50% / cover no-repeat url('../images/header/header-bg.png');
 
-h1 {
-	font-style: $font-size;
-	@include set-font($header-size--h1, "bold", $font-family--headers)
+	margin-bottom: 5rem;
+
+	&__wrap {
+		padding: 4rem 7rem 0;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__nav {
+		margin: 0 -17px;
+	}
+
+	&__slider {
+		margin-top: 5.5rem;
+	}
 }

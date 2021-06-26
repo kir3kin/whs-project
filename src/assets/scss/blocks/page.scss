@@ -4,21 +4,16 @@ html {
 }
 
 body {
-	font-family: Roboto;
+	font-family: $font-family;
 	font-size: 1.4rem;
 	line-height: 1.5;
-	color: $text-prim;
+	color: $main-color--text;
 }
 
-*,
-*:after,
-*:before {
-	box-sizing: border-box;
-}
-
-.site-container {
-	width: $site-container;
+.container {
+	width: $site-container--inner;
 	margin: 0 auto;
-	outline: 1px solid darkred;
 }
+
+
 

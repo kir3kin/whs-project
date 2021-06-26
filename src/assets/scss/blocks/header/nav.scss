@@ -1,0 +1,18 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+
+	&__item {
+		font: 300 $header-size--nav $font-family--headers;
+		display: block;
+		color: $header-color;
+		transition: color .2s ease;
+		padding: 0 17px;
+		
+		&:hover {
+			color: $header-nav--focus;
+		}
+	}
+}

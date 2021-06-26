@@ -1,0 +1,11 @@
+.login-subs {
+	margin-top: 3rem;
+	border-top: 1px solid $tab-border-color;
+
+	&__forms {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding: 2rem 0 3rem;
+	}
+}

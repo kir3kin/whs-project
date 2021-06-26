@@ -1,40 +1,44 @@
 // Main sizes
 $site-container: 1020px;
-$container-size: 820px;
+$site-container--inner: 820px;
 
 // Font families
-$font-family: 'myriad-pro', 'Menlo', monospace;
-$font-family--headers: 'segoe-wp', Arial, Helvetica;
-$font-weights: ("light": 300, "regular": 400, "bold": 700);
+$font-family: Arial, Helvetica, sans-serif;
+$font-family--headers: 'segoe-wp', Arial, Helvetica, sans-serif;
 
 // Text sizes
 $font-size: 1.4rem;
-$header-size--nav: 2.2rem;
-$header-size--h1: 6.2rem;
-$header-size--txt: 4.4rem;
-$header-size--btn: 2.2rem;
-$tab-size--btn: 2.6rem;
-$tab-size--header: 3.8rem;
-$choose-size--header: 3.2rem;
-$choose-size--tet: 1.6rem;
-$subscribe-size--header: 2.8rem;
-$subscribe-size--input: 1.6rem;
-$footer-size--header: 2.2rem;
-$footer-size--list: 1.3rem;
+$header-size--nav: 1.7rem;
+$header-size--t: 5rem;
+$header-size--subt: 3.3rem;
+$header-size--btn: 1.8rem;
+$tab-size--btn: 2rem;
+$tab-size--header: 3rem;
+$choose-size--header: 2.8rem;
+$choose-size--txt: 1.4rem;
+$form-size--header: 2.2rem;
+$form-size--input: 1.4rem;
+$footer-size--header: 1.8rem;
+$footer-size--list: 1.1rem;
+
+// Todo
+// - add class for all headers
+// - add animation speed
 
 // Text colors
 $header-color: #fff;
+$header-nav--focus: #6BBDE8;
 $main-color--tabs: #616161;
 $main-color--text: #828282;
+$tab-border-color: #DEDEDE;
 
 // Main blocks' colors
-$why-us-list: #E67624;
-$member-login: #e67624;
-$subs-week: #01d4f3;
+$form-color--login: #e67624;
+$form-color--subs: #01d4f3;
 
 // Buttons' colors
 $btn-slider: #2A6F4F;
-$btn-ml: #444444;
+$btn-lf: #444444;
 $btn-sw: #029BB1;
 
 // Media break points

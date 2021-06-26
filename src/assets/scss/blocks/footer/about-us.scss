@@ -1,0 +1,15 @@
+.about-us {
+	white-space: nowrap;
+
+	&__title{
+		@include footer-title($footer-size--header);
+	}
+
+	&__item {
+		margin-bottom: 0.3rem;
+	}
+
+	&__item:last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,119 @@
+.main-slider {
+	padding: 0 2.5rem;
+
+	
+	/****** Slider's control buttons */
+	.slider-contrl {
+		position: relative;
+	
+		&__btn {
+			background-color: transparent;
+			border: .3rem solid $main-color--text;
+			border-radius: 50%;
+			width: 4rem;
+			height: 4rem;
+		
+			position: absolute;
+			top: 5rem;
+	
+			cursor: pointer;
+			transition: border-color .2s linear;
+	
+			&:focus,
+			&:hover {
+				border-color: $header-nav--focus;
+			}
+	
+			&::after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				border-bottom: .8rem solid transparent;
+				border-top: .8rem solid transparent;
+				position: absolute;
+				top: .9rem;
+				transition: border-color .2s linear;
+			}
+	
+			&--right {
+				right: -15.5rem;
+	
+				&::after {
+					border-left: 1.1rem solid $main-color--text;
+					right: 1rem;
+				}
+	
+				&:focus::after,
+				&:hover::after {
+					border-left-color: $header-nav--focus;
+				}
+			}
+	
+			&--left {
+				left: -15.5rem;
+	
+				&::after {
+					border-right: 1.1rem solid $main-color--text;
+					left: 1rem;
+				}
+	
+				&:focus::after,
+				&:hover::after {
+					border-right-color: $header-nav--focus;
+				}
+			}
+	
+		}
+	}
+	
+	/****** Slider body */
+	.slider-slide {
+		display: flex;
+		justify-content: left;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+	
+		&__img {
+			width: 26.5rem;
+			height: 26.5rem;
+			margin-bottom: -5rem;
+			z-index: 2;
+		}
+	
+		&__desc {
+			padding: 3.5rem 0 4.5rem 6rem;
+		}
+	
+		&__title, &__subtitle, &__button {
+			font-family: $font-family--headers;
+			color: $header-color;
+			line-height: 1;
+		}
+	
+		&__title {
+			font-weight: 600;
+			font-size: $header-size--t;
+		}
+		
+		&__subtitle {
+			font-size: $header-size--subt;
+			margin: .5rem 0 3rem;
+		}
+	
+		&__button {
+			font-size: $header-size--btn;
+			background-color: $btn-slider;
+			padding: .7rem 2rem .6rem;
+			transition: .2s linear;
+	
+			box-shadow: 0 0 .5rem .5rem rgba(0,0,0, .2);
+	
+			&:focus,
+			&:hover {
+				color: $header-nav--focus;
+				background-color: darken($btn-slider, 10%);
+			}
+		}
+	}
+}

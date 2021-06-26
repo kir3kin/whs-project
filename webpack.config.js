@@ -4,23 +4,29 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+// const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+const isProduction = process.env.NODE_ENV === 'production'
 
-const isProduction = process.env.NODE_ENV == 'production';
-
-
-const cssLoaders = (extra) => {
+const cssLoaders = extra => {
 	const loaders = [
 		{ 
-			loader: MiniCssExtractPlugin.loader
+			loader: !isProduction ? 'style-loader' : MiniCssExtractPlugin.loader,
 		},
-		'css-loader',
+		'css-loader'
 	]
 
 	if (extra) loaders.push(extra)
 	return loaders
 }
 
+const imagePath = isProduction => {
+	const generator = !isProduction ? {} : {
+		publicPath: '/dist/',
+		filename: 'static/images/[name][ext]'
+	}
+	return generator
+}
 
 const config = {
 	entry: {
@@ -28,16 +34,20 @@ const config = {
 		// page2: './src/page2.js',
 	},
 	output: {
-		filename: '[name].js',
+		filename: 'static/js/[name].js',
 		path: path.resolve(__dirname, 'dist'),
-		clean: true
+		// publicPath: './'
 	},
 	resolve: {
-		extensions: ['.js', '.json', '.scss']
+		extensions: ['.js', '.json', '.css', '.scss'],
+		alias: {
+			images: path.resolve(__dirname, 'src/assets/images')
+		}
 	},
+	devtool: 'source-map',
 	devServer: {
 			open: true,
-			host: 'localhost',
+			port: 7373,
 			watchContentBase: true,
 			hot: true
 	},
@@ -52,40 +62,54 @@ const config = {
 			// 	template: './src/page2.html',
 			// 	filename: 'page2.html'
 			// }),
-			new CleanWebpackPlugin(),
+			// new CopyWebpackPlugin({
+			// 	patterns: [
+			// 		{
+			// 			from: path.resolve(__dirname, 'src/assets/images/**/*.png'),
+			// 			to: path.resolve(__dirname, 'dist/assets/images/')
+			// 		}
+			// 	]
+			// }),
 			new MiniCssExtractPlugin({
-				filename: '[name].css'
-			})
-			// Add your plugins here
-			// Learn more about plugins from https://webpack.js.org/configuration/plugins/
+				filename: 'static/styles/main.css'
+			}),
+			new CleanWebpackPlugin()
 	],
 	module: {
 		rules: [
 			{
-				test: /\.css$/,
-				use: cssLoaders()
+				test: /\.html$/i,
+				loader: 'html-loader',
 			},
+			// {
+			// 	test: /\.css$/i,
+			// 	use: cssLoaders()
+			// },
 			{
 				test: /\.(js|jsx)$/i,
-				loader: 'babel-loader',
+				exclude: '/node_modules/',
+				loader: 'babel-loader'
 			},
 			{
 				test: /\.s[ac]ss$/i,
 				use: cssLoaders('sass-loader')
 			},
 			{
-				test: /\.(eot|svg|png|jpg|gif)$/i,
-				type: 'asset',
+			test: /\.(svg|png|jpg|gif)$/i,
+				type: 'asset/resource',
+				generator: imagePath(isProduction)
 			},
 			{
 				test: /\.(ttf|woff|woff2|eot)$/i,
-				use: ['file-loader']
-			},
-
-			// Add your rules for custom modules here
-			// Learn more about loaders from https://webpack.js.org/loaders/
+				loader: 'file-loader',
+				options: {
+					name: '[contenthash].[ext]',
+					outputPath: 'static/fonts',
+					publicPath: '/dist/static/fonts/'
+				}
+			}
 		],
-	},
+	}
 };
 
 module.exports = () => {
