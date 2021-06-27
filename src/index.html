@@ -10,7 +10,6 @@
 	<div class="site-container">
 		<header class="header">
 			<div class="header__wrap container">
-
 					<div class="header__row">
 						<!-- logo -->
 						<div class="header__logo logo">
@@ -18,34 +17,60 @@
 						</div>
 						<!-- navigation -->
 						<nav class="header__nav nav">
-							<a class="nav__item" href="#">Solutions</a>
-							<a class="nav__item" href="#">Products</a>
-							<a class="nav__item" href="#">Portfolio</a>
+							<a class="nav__item " href="#">Solutions</a>
+							<a class="nav__item nav__item--active" href="#">Products</a>
+							<a class="nav__item " href="#">Portfolio</a>
 							<a class="nav__item" href="#">Contact</a>
 						</nav>
 					</div>
 					<!-- main-slider(banner) -->
-					<div class="header__slider main-slider">
-						<!-- slider-butns -->
+					<div id="main-slider" class="header__slider main-slider">
+						<!-- slider-btns -->
 						<div class="slider-contrl">
-							<div id='slider-btn-left' class="slider-contrl__btn slider-contrl__btn--left"></div>
-							<div id='slider-btn-rigth' class="slider-contrl__btn slider-contrl__btn--right"></div>
+							<div id="main-slider-btn-left" data-btn="left" class="slider-contrl__btn slider-contrl__btn--left"></div>
+							<div id="main-slider-btn-right" data-btn="right" class="slider-contrl__btn slider-contrl__btn--right"></div>
 						</div>
-						<!-- ./slider-butns -->
-						<!-- main-slider__slide -->
-						<div class="main-slider__wrap">
-							<!-- slider-slide -->
-							<div class="slider-slide">
-								<img src="~images/header/slider/slide-1.png" class="slider-slide__img">
-								<div class="slider-slide__desc">
-									<h3 class="slider-slide__title">Introducing</h3>
-									<h4 class="slider-slide__subtitle">Something hot...</h4>
-									<button class="slider-slide__button" id="demo">Try demo</button>
+						<!-- ./slider-btns -->
+						<!-- main-slider__container -->
+						<div class="main-slider__container">
+							<!-- main-slider__wrap -->
+							<div id="main-slider-wrap" class="main-slider__wrap">
+								<!-- slider-slide -->
+								<div class="slider-slide" data-slider="slider-slide">
+									<div class="slider-slide__img">
+										<img src="~images/header/slider/slide-1.png">
+									</div>
+									<div class="slider-slide__desc">
+										<h3 class="slider-slide__title">Introducing</h3>
+										<h4 class="slider-slide__subtitle">Something hot... 1</h4>
+										<button class="slider-slide__button" id="demo">Try demo</button>
+									</div>
 								</div>
+								<!-- ./slider-slide -->
+								<!-- slider-slide -->
+								<div class="slider-slide" data-slider="slider-slide">
+									<img src="~images/header/slider/slide-1.png" class="slider-slide__img">
+									<div class="slider-slide__desc">
+										<h3 class="slider-slide__title">Introducing</h3>
+										<h4 class="slider-slide__subtitle">Something hot... 2</h4>
+										<button class="slider-slide__button" id="demo">Try demo</button>
+									</div>
+								</div>
+								<!-- ./slider-slide -->
+								<!-- slider-slide -->
+								<div class="slider-slide" data-slider="slider-slide">
+									<img src="~images/header/slider/slide-1.png" class="slider-slide__img">
+									<div class="slider-slide__desc">
+										<h3 class="slider-slide__title">Introducing</h3>
+										<h4 class="slider-slide__subtitle">Something hot... 3</h4>
+										<button class="slider-slide__button" id="demo">Try demo</button>
+									</div>
+								</div>
+								<!-- ./slider-slide -->
 							</div>
-							<!-- ./slider-slide -->
+							<!-- main-slider__wrap -->
 						</div>
-						<!-- main-slider__slide -->
+						<!-- ./main-slider__container -->
 					</div>
 					<!-- ./main-slider(banner) -->
 			</div>
@@ -53,10 +78,8 @@
 		</header>
 		<main>
 			<div class="container">
-
 				<!-- tabs-block -->
 				<section class="main__tabs tabs">
-
 					<!-- tabs__row || control btn -->
 					<div class="tabs__row">
 						<div class="tabs__column">
@@ -96,7 +119,6 @@
 						</div>
 					</div>
 					<!-- ./tabs__row || control btn -->
-
 					<!-- tabs__body -->
 					<div class="tabs__body">
 						<!-- tab-context 1 -->
@@ -114,8 +136,8 @@
 					</div>
 					<!-- ./tabs__body -->
 				</section>
-
-			</div><!-- ./container -->
+			</div>
+			<!-- ./container -->
 			<div class="container">
 				<!-- choose-us -->
 				<section class="choose-us">
@@ -133,8 +155,8 @@
 					</div>
 				</section>
 				<!-- ./choose-us -->
-			</div><!-- ./container -->
-
+			</div>
+			<!-- ./container -->
 			<!-- login-subs -->
 			<section class="login-subs">
 				<div class="container">
@@ -150,7 +172,6 @@
 							</div>
 						</form>
 						<!-- ./login-form -->
-		
 						<!-- subs-form -->
 						<form class="subs-form">
 							<h4 class="subs-form__header">Subscribe to our weekly newsletter</h4>
@@ -162,10 +183,10 @@
 						<!-- ./subs-form -->
 					</div>
 					<!-- ./login-subs__forms -->
-				</div><!-- ./container -->
+				</div>
+				<!-- ./container -->
 			</section>
 			<!-- ./login-subs -->
-
 		</main>
 		<footer class="footer">
 			<div class="container">
@@ -197,41 +218,59 @@
 						</ul>
 					</div>
 					<!-- ./about-us -->
-					<!-- ./about-us -->
 					<!-- footer__slider -->
-					<div class="footer__slider text-slider">
+					<div id="text-slider" class="footer__slider text-slider">
+						<!-- slider-btns -->
+						<div class="slider-contrl">
+							<div id="text-slider-btn-left" data-btn="left" class="slider-contrl__btn slider-contrl__btn--left"></div>
+							<div id="text-slider-btn-right" data-btn="right" class="slider-contrl__btn slider-contrl__btn--right"></div>
+						</div>
+						<!-- ./slider-btns -->
 						<div class="text-slider__container">
-	
-							<!-- text-slider__slide -->
-							<div class="text-slider__slide">
-
-								<div class="slider-contrl">
-									<div class="slider-contrl__btn slider-contrl__btn--left"></div>
-									<div class="slider-contrl__btn slider-contrl__btn--right"></div>
-								</div>
-
-								<div class="testim-slide">
-									<h5 class="testim-slide__title">Testimoanials</h5>
+								<!-- text-slider__wrap -->
+							<div id="text-slider-wrap" class="text-slider__wrap">
+								<!-- testim-slide -->
+								<div class="testim-slide" data-slider="slider-slide">
+									<h5 class="testim-slide__title">Testimoanials 1</h5>
 									<p class="testim-slide__text">Lorem Ipsum is simply dummy text of the printing and 
 										typesetting industry. Lorem Ipsum has been the industr standard dummy text ever since the 1500s, when an unknown printer took a </p>
 									<p class="testim-slide__text"><strong class="testim-slide__desc">Lorem Ipsum is simply</strong></p>
 									<p class="testim-slide__text"><strong class="testim-slide__owner">Owner, Lorem Ipsum</strong></p>
 								</div>
 								<!-- ./testim-slide -->
+								<!-- testim-slide 2 -->
+								<div class="testim-slide" data-slider="slider-slide">
+									<h5 class="testim-slide__title">Testimoanials 2</h5>
+									<p class="testim-slide__text">Lorem Ipsum is simply dummy text of the printing and 
+										typesetting industry. Lorem Ipsum has been the industr standard dummy text ever since the 1500s, when an unknown printer took a </p>
+									<p class="testim-slide__text"><strong class="testim-slide__desc">Lorem Ipsum is simply</strong></p>
+									<p class="testim-slide__text"><strong class="testim-slide__owner">Owner, Lorem Ipsum</strong></p>
+								</div>
+								<!-- ./testim-slide 2 -->
+								<!-- testim-slide 3 -->
+								<div class="testim-slide" data-slider="slider-slide">
+									<h5 class="testim-slide__title">Testimoanials 3</h5>
+									<p class="testim-slide__text">Lorem Ipsum is simply dummy text of the printing and 
+										typesetting industry. Lorem Ipsum has been the industr standard dummy text ever since the 1500s, when an unknown printer took a </p>
+									<p class="testim-slide__text"><strong class="testim-slide__desc">Lorem Ipsum is simply</strong></p>
+									<p class="testim-slide__text"><strong class="testim-slide__owner">Owner, Lorem Ipsum</strong></p>
+								</div>
+								<!-- ./testim-slide 3 -->
 							</div>
-							<!-- ./text-slider__slide -->
+							<!-- ./text-slider__wrap -->
 						</div>
 						<!-- ./text-slider__container -->
 					</div>
 					<!-- ./footer__slider -->
-					
 					<div class="footer__logo logo logo__footer">
 						<a href="#" class=""></a>
 					</div>
 				</div>
 				<!-- ./footer__body -->
-			</div><!-- ./container -->
+			</div>
+			<!-- ./container -->
 		</footer>
-	</div><!-- ./site-container -->
+	</div>
+	<!-- ./site-container -->
 </body>
 </html>

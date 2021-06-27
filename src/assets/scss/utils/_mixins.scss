@@ -1,6 +1,6 @@
 @use "sass:map";
 
-@mixin form-submite($form-color, $input-size) {
+@mixin form-submit($form-color, $input-size) {
 	background-color: $form-color;
 	padding: 1rem 2.5rem 1.5rem;
 	border-radius: 5px;

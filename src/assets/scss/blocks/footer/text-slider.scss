@@ -1,11 +1,22 @@
 .text-slider {
 	position: relative;
+
+	&__container {
+		width: 26rem;
+		overflow: hidden;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-flow: row nowrap;
+	}
 	
 	/****** Slider's control buttons */
 	.slider-contrl {
 		position: absolute;
 		top: .7rem;
 		right: 5rem;
+		z-index: 1;
 	
 		&__btn {
 			background-image: url('../images/footer/text-slider/text-slider--arr.png');
@@ -37,11 +48,10 @@
 		}
 	}
 	
-	
-	/****** Slider body */
+		/****** Slider body */
 	.testim-slide {
-		width: 26rem;
-	
+		min-width: 26rem;
+
 		&__title {
 			@include footer-title($footer-size--header);
 		}

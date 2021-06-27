@@ -11,6 +11,7 @@
 		transition: color .2s ease;
 		padding: 0 17px;
 		
+		&--active,
 		&:hover {
 			color: $header-nav--focus;
 		}

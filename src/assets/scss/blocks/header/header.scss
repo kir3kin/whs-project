@@ -1,12 +1,12 @@
 .header {
 	background: 50% / cover no-repeat url('../images/header/header-bg.png');
+	margin-bottom: 5.5rem;
 
-	margin-bottom: 5rem;
-
+	
 	&__wrap {
-		padding: 4rem 7rem 0;
+		padding: 4rem 7rem 4rem;
 	}
-
+	
 	&__row {
 		display: flex;
 		flex-direction: row;
@@ -18,6 +18,6 @@
 	}
 
 	&__slider {
-		margin-top: 5.5rem;
+		margin-top: -5rem;
 	}
 }

@@ -47,8 +47,8 @@ $screen-md: 768px;
 $screen-sm: 480px;
 
 
-$header: 390px;
-$tabIconSize: 240*200px;
-$tabContent: 630px;
-$chooseUs: 250px;
-$mL-sW: 90*370px;
+// Header slider
+$hs-scrool-speed: .5s;
+
+// Footer slider
+$fs-scrool-speed: .5s;
