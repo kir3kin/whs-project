@@ -79,11 +79,11 @@
 		<main>
 			<div class="container">
 				<!-- tabs-block -->
-				<section class="main__tabs tabs">
+				<section class="main__tabs tabs" id="tabs">
 					<!-- tabs__row || control btn -->
-					<div class="tabs__row">
+					<div class="tabs__btns">
 						<div class="tabs__column">
-							<div class="tab-btn">
+							<div class="tab-btn tab-btn--active" id="tab-1">
 								<div class="tab-btn__icon">
 									<img src="~images/tabs/btns/tab-1.png" alt="tab-1.png">
 								</div>
@@ -91,7 +91,7 @@
 							</div>
 						</div>
 						<div class="tabs__column">
-							<div class="tab-btn tab-btn--active">
+							<div class="tab-btn" id="tab-2">
 								<div class="tab-btn__icon">
 									<img src="~images/tabs/btns/tab-2.png" alt="tab-2.png">
 								</div>
@@ -100,7 +100,7 @@
 							</div>
 						</div>
 						<div class="tabs__column">
-							<div class="tab-btn">
+							<div class="tab-btn"  id="tab-3">
 								<div class="tab-btn__icon">
 									<img src="~images/tabs/btns/tab-3.png" alt="tab-3.png">
 								</div>
@@ -109,7 +109,7 @@
 							</div>
 						</div>
 						<div class="tabs__column">
-							<div class="tab-btn">
+							<div class="tab-btn" id="tab-4">
 								<div class="tab-btn__icon">
 									<img src="~images/tabs/btns/tab-4.png" alt="tab-4.png">
 								</div>
@@ -118,21 +118,48 @@
 							</div>
 						</div>
 					</div>
-					<!-- ./tabs__row || control btn -->
+					<!-- ./tabs__btns || control btn -->
 					<!-- tabs__body -->
-					<div class="tabs__body">
+					<div class="tabs__body" data-tab="tabs-body">
 						<!-- tab-context 1 -->
-						<div class="tab-context tab-context--active">
+						<div class="tab-context tab-context--active" data-tab="tab-1">
 							<div class="tab-context__img">
 								<img src="~images/tabs/context/tab-ipad.png" alt="">
 							</div>
-							<h4 class="tab-context__title">Lorem Ipsum is simply dummy text </h4>
+							<h4 class="tab-context__title">Lorem Ipsum is simply dummy text 1</h4>
 							<div class="tab-context__text">
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
 								<p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 							</div>
 						</div>
 						<!-- ./tab-context 1 -->
+						<!-- tab-context 2 -->
+						<div class="tab-context" data-tab="tab-2">
+							<h4 class="tab-context__title">Lorem Ipsum is simply dummy text 2</h4>
+							<div class="tab-context__text">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+							</div>
+						</div>
+						<!-- ./tab-context 2 -->
+						<!-- tab-context 3 -->
+						<div class="tab-context" data-tab="tab-3">
+							<div class="tab-context__img">
+								<img src="~images/tabs/context/tab-ipad.png" alt="">
+							</div>
+							<h4 class="tab-context__title">Lorem Ipsum is simply dummy text 3</h4>
+							<div class="tab-context__text">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+							</div>
+						</div>
+						<!-- ./tab-context 3 -->
+						<!-- tab-context 4 -->
+						<div class="tab-context" data-tab="tab-4">
+							<h4 class="tab-context__title">Lorem Ipsum is simply dummy text 4</h4>
+							<div class="tab-context__text">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+							</div>
+						</div>
+						<!-- ./tab-context 4 -->
 					</div>
 					<!-- ./tabs__body -->
 				</section>
