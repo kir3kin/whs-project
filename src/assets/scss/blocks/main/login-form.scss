@@ -1,3 +1,12 @@
 .login-form {
 	@include form-submit($form-color--login, 12.5rem);
+
+	input:invalid {
+		border: 2px dashed red;
+	}
+
+	input:valid {
+		border: 2px solid black;
+	}
 }
+
