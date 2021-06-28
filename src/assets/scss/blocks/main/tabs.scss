@@ -13,12 +13,14 @@
 	}
 
 	&__body {
+		// hide all contens for the correct display
+		display: none;
 		border: 2px solid $tab-border-color;
 		position: relative;
 		overflow: hidden;
 		z-index: 1;
-		transition: height .4s ease-in-out;
 
+		transition: height .4s ease-in-out;
 	}
 }
 
