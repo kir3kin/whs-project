@@ -23,7 +23,6 @@ $footer-size--list: 1.1rem;
 
 // Todo
 // - add class for all headers
-// - add animation speed
 
 // Text colors
 $header-color: #fff;
@@ -39,16 +38,11 @@ $form-color--subs: #01d4f3;
 // Buttons' colors
 $btn-slider: #2A6F4F;
 $btn-lf: #444444;
-$btn-sw: #029BB1;
 
 // Media break points
 $screen-lg: 991px;
 $screen-md: 768px;
 $screen-sm: 480px;
 
-
-// Header slider
-$hs-scrool-speed: .5s;
-
-// Footer slider
-$fs-scrool-speed: .5s;
+// z indexes
+$z-index-modal: 3;

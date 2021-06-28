@@ -82,6 +82,7 @@
 		display: flex;
 		justify-content: left;
 		padding-right: 4rem;
+		min-width: 64rem;
 	
 		&__img {
 			position: relative;
@@ -117,6 +118,7 @@
 		}
 	
 		&__button {
+			display: block;
 			font-size: $header-size--btn;
 			background-color: $btn-slider;
 			padding: .7rem 2rem .6rem;

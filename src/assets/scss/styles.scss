@@ -3,18 +3,24 @@
 @import './fonts/fonts';
 @import '~reset-scss';
 
-/* Blocks */
+/*** Blocks ***/
+// main page settings
 @import 'blocks/page';
+// header part
 @import 'blocks/header/header';
 @import 'blocks/header/logo';
 @import 'blocks/header/nav';
 @import 'blocks/header/main-slider';
+// main part
 @import 'blocks/main/tabs';
 @import 'blocks/main/choose-us';
 @import 'blocks/main/login-subs';
 @import 'blocks/main/login-form';
 @import 'blocks/main/subs-form';
+// footer part
 @import 'blocks/footer/footer';
 @import 'blocks/footer/about-us';
 @import 'blocks/footer/text-slider';
 @import 'blocks/footer/footer-logo';
+// modals
+@import 'blocks/modals/modal-slider';

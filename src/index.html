@@ -16,11 +16,11 @@
 							<a href="#"></a>
 						</div>
 						<!-- navigation -->
-						<nav class="header__nav nav">
-							<a class="nav__item " href="#">Solutions</a>
-							<a class="nav__item nav__item--active" href="#">Products</a>
-							<a class="nav__item " href="#">Portfolio</a>
-							<a class="nav__item" href="#">Contact</a>
+						<nav class="header__nav nav" id="nav">
+							<a class="nav__item" href="#solutions">Solutions</a>
+							<a class="nav__item" href="#products">Products</a>
+							<a class="nav__item" href="#portfolio">Portfolio</a>
+							<a class="nav__item" href="/#contact">Contact</a>
 						</nav>
 					</div>
 					<!-- main-slider(banner) -->
@@ -35,38 +35,45 @@
 						<div class="main-slider__container">
 							<!-- main-slider__wrap -->
 							<div id="main-slider-wrap" class="main-slider__wrap">
-								<!-- slider-slide -->
+							
+								<!-- slider-slide 1 -->
 								<div class="slider-slide" data-slider="slider-slide">
 									<div class="slider-slide__img">
 										<img src="~images/header/slider/slide-1.png">
 									</div>
 									<div class="slider-slide__desc">
 										<h3 class="slider-slide__title">Introducing</h3>
-										<h4 class="slider-slide__subtitle">Something hot... 1</h4>
-										<button class="slider-slide__button" id="demo">Try demo</button>
+										<h4 class="slider-slide__subtitle">Something hot...</h4>
+										<button class="slider-slide__button" data-modal="modal-slider">Try demo</button>
 									</div>
 								</div>
-								<!-- ./slider-slide -->
-								<!-- slider-slide -->
+								<!-- ./slider-slide 1 -->
+
+								<!-- slider-slide 2 -->
 								<div class="slider-slide" data-slider="slider-slide">
-									<img src="~images/header/slider/slide-1.png" class="slider-slide__img">
+									<div class="slider-slide__img">
+										<img src="~images/header/slider/slide-1.png">
+									</div>
 									<div class="slider-slide__desc">
-										<h3 class="slider-slide__title">Introducing</h3>
+										<h3 class="slider-slide__title">Intro</h3>
 										<h4 class="slider-slide__subtitle">Something hot... 2</h4>
-										<button class="slider-slide__button" id="demo">Try demo</button>
+										<button class="slider-slide__button" data-modal="modal-slider">Try demo</button>
 									</div>
 								</div>
-								<!-- ./slider-slide -->
-								<!-- slider-slide -->
+								<!-- ./slider-slide 2 -->
+
+								<!-- slider-slide 3 -->
 								<div class="slider-slide" data-slider="slider-slide">
-									<img src="~images/header/slider/slide-1.png" class="slider-slide__img">
+									<div class="slider-slide__img">
+										<img src="//via.placeholder.com/265x265">
+									</div>
 									<div class="slider-slide__desc">
-										<h3 class="slider-slide__title">Introducing</h3>
+										<h3 class="slider-slide__title">Title 3</h3>
 										<h4 class="slider-slide__subtitle">Something hot... 3</h4>
-										<button class="slider-slide__button" id="demo">Try demo</button>
+										<button class="slider-slide__button" data-modal="modal-slider">Try demo</button>
 									</div>
 								</div>
-								<!-- ./slider-slide -->
+								<!-- ./slider-slide 3 -->
 							</div>
 							<!-- main-slider__wrap -->
 						</div>
@@ -299,5 +306,23 @@
 		</footer>
 	</div>
 	<!-- ./site-container -->
+
+
+	<!-- slider modal -->
+	<div class="modal__slider modal" id="modal-slider">
+		<div class="modal__wrap">
+			<div class="modal__content">
+				<button class="modal__close" type="button">
+					<img src="~images/modal/closeModal.svg" alt="Закрыть">
+				</button>
+				<div class="modal__title">Introducing</div>
+				<div class="modal__desc">Something hot 1</div>
+				<div class="modal__img">
+					<img src="~images/header/slider/slide-1.png" alt="coffee">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ./slider modal -->
 </body>
 </html>
