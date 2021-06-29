@@ -13,4 +13,17 @@ body {
 .container {
 	width: $site-container--inner;
 	margin: 0 auto;
+
+
+	@include breakpoint($screen-lg) {
+		max-width: 760px;
+	}
+
+	@include breakpoint($screen-md) {
+		max-width: 460px;
+	}
+
+	@include breakpoint($screen-sm) {
+		max-width: 100%;
+	}
 }

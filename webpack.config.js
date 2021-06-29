@@ -1,12 +1,11 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV === 'production'
+const isServe = process.env.NODE_ENV === 'serve'
 
 const cssLoaders = extra => {
 	const loaders = [
@@ -22,7 +21,7 @@ const cssLoaders = extra => {
 
 const imagePath = () => {
 	const generator = {
-		publicPath: isProduction ? '/' : '/dist/',
+		publicPath: isServe ? '' : isProduction ? '/' : '/dist/',
 		filename: 'static/images/[name][ext]'
 	}
 	return generator
@@ -31,12 +30,10 @@ const imagePath = () => {
 const config = {
 	entry: {
 		index: './src/index.js'
-		// page2: './src/page2.js',
 	},
 	output: {
 		filename: 'static/js/[name].js',
 		path: path.resolve(__dirname, 'dist'),
-		// publicPath: './'
 	},
 	resolve: {
 		extensions: ['.js', '.json', '.css', '.scss'],
@@ -53,23 +50,16 @@ const config = {
 	},
 	plugins: [
 			new HtmlWebpackPlugin({
-				// chunks: ['index'],
 				template: './src/index.html',
-				// filename: 'index.html'
 			}),
-			// new HtmlWebpackPlugin({
-			// 	chunks: ['index', 'page2'],
-			// 	template: './src/page2.html',
-			// 	filename: 'page2.html'
-			// }),
-			// new CopyWebpackPlugin({
-			// 	patterns: [
-			// 		{
-			// 			from: path.resolve(__dirname, 'src/assets/images/**/*.png'),
-			// 			to: path.resolve(__dirname, 'dist/assets/images/')
-			// 		}
-			// 	]
-			// }),
+			new CopyWebpackPlugin({
+				patterns: [
+					{
+						from: path.resolve(__dirname, 'src/assets/mail.php'),
+						to: path.resolve(__dirname, 'dist/static/')
+					}
+				]
+			}),
 			new MiniCssExtractPlugin({
 				filename: 'static/styles/main.css'
 			}),
@@ -81,10 +71,6 @@ const config = {
 				test: /\.html$/i,
 				loader: 'html-loader',
 			},
-			// {
-			// 	test: /\.css$/i,
-			// 	use: cssLoaders()
-			// },
 			{
 				test: /\.(js|jsx)$/i,
 				exclude: '/node_modules/',

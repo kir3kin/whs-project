@@ -20,4 +20,35 @@
 	&__slider {
 		margin-top: -5rem;
 	}
+
+	@include breakpoint($screen-lg) {
+		&__slider {
+			margin-top: -4rem;
+		}
+	}
+
+	@include breakpoint($screen-md) {
+		&__wrap {
+			padding: 2rem 3rem;
+		}
+
+		&__row {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__slider {
+			margin-top: 0;
+		}
+	}
+
+	
+	@include breakpoint($screen-sm) {
+		&__wrap {
+			padding: 2rem;
+		}
+
+	}
+
 }

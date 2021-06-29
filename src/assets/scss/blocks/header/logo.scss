@@ -11,4 +11,13 @@
 	&:hover {
 		opacity: 1;
 	}
+
+	@include breakpoint($screen-lg) {
+		height: 5rem;
+		width: 15rem;
+	}
+	
+	@include breakpoint($screen-md) {
+		margin-bottom: 2rem;
+	}
 }

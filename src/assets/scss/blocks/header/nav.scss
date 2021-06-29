@@ -16,4 +16,18 @@
 			color: $header-nav--focus;
 		}
 	}
+
+	@include breakpoint($screen-sm) {
+		flex-flow: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		text-align: center;
+
+		&__item {
+			width: 100%;
+			font-size: $sm-header-size--nav;
+			padding: 1rem;
+		}
+	}
 }

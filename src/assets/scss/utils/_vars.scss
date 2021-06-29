@@ -1,28 +1,9 @@
 // Main sizes
-$site-container: 1020px;
 $site-container--inner: 820px;
 
 // Font families
 $font-family: Arial, Helvetica, sans-serif;
 $font-family--headers: 'segoe-wp', Arial, Helvetica, sans-serif;
-
-// Text sizes
-$font-size: 1.4rem;
-$header-size--nav: 1.7rem;
-$header-size--t: 5rem;
-$header-size--subt: 3.3rem;
-$header-size--btn: 1.8rem;
-$tab-size--btn: 2rem;
-$tab-size--header: 3rem;
-$choose-size--header: 2.8rem;
-$choose-size--txt: 1.4rem;
-$form-size--header: 2.2rem;
-$form-size--input: 1.4rem;
-$footer-size--header: 1.8rem;
-$footer-size--list: 1.1rem;
-
-// Todo
-// - add class for all headers
 
 // Text colors
 $header-color: #fff;
@@ -30,6 +11,7 @@ $header-nav--focus: #6BBDE8;
 $main-color--tabs: #616161;
 $main-color--text: #828282;
 $tab-border-color: #DEDEDE;
+$form-alert-color: darkred;
 
 // Main blocks' colors
 $form-color--login: #e67624;
@@ -46,3 +28,68 @@ $screen-sm: 480px;
 
 // z indexes
 $z-index-modal: 3;
+
+
+// Text sizes (min-width: 991px)
+$font-size: 1.4rem;
+$header-size--nav: 1.7rem;
+$header-size--t: 5rem;
+$header-size--subt: 3.3rem;
+$header-size--btn: 1.8rem;
+$tab-size--btn: 2rem;
+$tab-size--header: 3rem;
+$choose-size--header: 2.8rem;
+$choose-size--txt: 1.4rem;
+$form-size--header: 2.2rem;
+$form-size--input: 1.4rem;
+$form-size--label: 1.3rem;
+$footer-size--header: 1.8rem;
+$footer-size--list: 1.1rem;
+
+// Text sizes (max-width: 991px)
+$lg-font-size: 1.4rem;
+$lg-header-size--nav: 1.6rem;
+$lg-header-size--t: 4rem;
+$lg-header-size--subt: 2.8rem;
+$lg-header-size--btn: 1.7rem;
+$lg-tab-size--btn: 2rem;
+$lg-tab-size--header: 3rem;
+$lg-choose-size--header: 2.8rem;
+$lg-choose-size--txt: 1.4rem;
+$lg-form-size--header: 2.2rem;
+$lg-form-size--input: 1.4rem;
+$lg-form-size--label: 1.3rem;
+$lg-footer-size--header: 1.8rem;
+$lg-footer-size--list: 1.1rem;
+
+// Text sizes (max-width: 768px)
+$md-font-size: 1.3rem;
+$md-header-size--nav: 1.5rem;
+$md-header-size--t: 3rem;
+$md-header-size--subt: 2.4rem;
+$md-header-size--btn: 1.6rem;
+$md-tab-size--btn: 1.8rem;
+$md-tab-size--header: 2.3rem;
+$md-choose-size--header: 2.2rem;
+$md-choose-size--txt: 1.3rem;
+$md-form-size--header: 1.8rem;
+$md-form-size--input: 1.3rem;
+$md-form-size--label: 1.3rem;
+$md-footer-size--header: 1.6rem;
+$md-footer-size--list: 1.2rem;
+
+// Text sizes (max-width: 480px)
+$sm-font-size: 1.4rem;
+$sm-header-size--nav: 1.8rem;
+$sm-header-size--t: 3rem;
+$sm-header-size--subt: 2.4rem;
+$sm-header-size--btn: 1.6rem;
+$sm-tab-size--btn: 1.8rem;
+$sm-tab-size--header: 2.3rem;
+$sm-choose-size--header: 2.2rem;
+$sm-choose-size--txt: 1.3rem;
+$sm-form-size--header: 1.8rem;
+$sm-form-size--input: 1.3rem;
+$sm-form-size--label: 1.3rem;
+$sm-footer-size--header: 1.6rem;
+$sm-footer-size--list: 1.2rem;

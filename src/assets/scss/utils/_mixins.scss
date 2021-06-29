@@ -1,42 +1,3 @@
-@mixin form-submit($form-color, $input-size) {
-	background-color: $form-color;
-	padding: 1rem 2.5rem 1.5rem;
-	border-radius: 5px;
-	
-	&__header {
-		font-size: $form-size--header;
-		font-weight: 200;
-		color: $header-color;
-		line-height: 1;
-		margin-bottom: 1.5rem;
-	}
-	
-	&__content {
-		display: flex;
-		justify-content: space-between;
-	}
-	
-	&__name, &__pass, &__email {
-		padding: 0.3rem 1rem;
-		width: $input-size;
-		margin-right: 1rem;
-		font-size: $form-size--input;
-	}
-
-	&__submit {
-		padding: 0.5rem 1rem;
-		background-color: $btn-lf;
-		color: $header-color;
-		transition: .2s linear;
-
-		&:focus,
-		&:hover {
-			background-color: darken($btn-lf, 10%);
-			color: $header-nav--focus;
-		}
-	}
-}
-
 @mixin footer-title($title-size) {
 	font-size: $title-size;
 	margin-bottom: 1rem;
@@ -53,7 +14,6 @@
 		background-color: darken($color, 10%);
 	}
 }
-
 
 @mixin breakpoint($bp) {
 	@media (max-width: $bp) {

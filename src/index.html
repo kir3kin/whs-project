@@ -200,8 +200,17 @@
 						<form class="login-form">
 							<h4 class="login-form__header">Member login</h4>
 							<div class="login-form__content">
-								<input type="text" name="" id="" placeholder="User name" class="login-form__name">
-								<input type="password" name="" id="" placeholder="Password" class="login-form__pass">
+
+								<div class="login-form__input-wrap">
+									<label for="login-form-name" class="login-form__label"></label>
+									<input type="text" name="login-form-name" id="login-form-name" placeholder="User name" class="login-form__name">
+								</div>
+
+								<div class="login-form__input-wrap">
+									<label for="login-form-pass" class="login-form__label"></label>
+									<input type="password" name="login-form-pass" id="login-form-pass" placeholder="Password" class="login-form__pass">
+								</div>
+
 								<button type="submit" class="login-form__submit">Log in</button>
 							</div>
 						</form>
@@ -210,7 +219,11 @@
 						<form class="subs-form">
 							<h4 class="subs-form__header">Subscribe to our weekly newsletter</h4>
 							<div class="subs-form__content">
-								<input type="email" name="" id="" placeholder="email address" class="subs-form__email">
+								
+								<div class="subs-form__input-wrap">
+									<label for="subs-form-email" class="subs-form__label subs-form__label--show"></label>
+									<input type="email" name="subs-form-email" id="subs-form-email" placeholder="email address" class="subs-form__email">
+								</div>
 								<button type="submit" class="subs-form__submit">Subscribe</button>
 							</div><!-- ./subs-form__content -->
 						</form>

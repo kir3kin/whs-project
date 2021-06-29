@@ -1,0 +1,78 @@
+@mixin form-submit($form-color, $input-size) {
+	background-color: $form-color;
+	padding: 1rem 2.5rem 1.5rem;
+	border-radius: 5px;
+	min-width: 37.5rem;
+	max-width: 50%;
+	
+	&__header {
+		font-size: $form-size--header;
+		font-weight: 200;
+		color: $header-color;
+		line-height: 1;
+		margin-bottom: 1.5rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		line-height: 1.1;
+	}
+	
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__name, &__pass, &__email {
+		padding: 0.3rem 1rem;
+		width: $input-size;
+		margin-right: 1rem;
+		font-size: $form-size--input;
+	}
+
+	&__submit {
+		padding: 0.5rem 1rem;
+		background-color: $btn-lf;
+		color: $header-color;
+		transition: .2s linear;
+
+		&:focus,
+		&:hover {
+			background-color: darken($btn-lf, 10%);
+			color: $header-nav--focus;
+		}
+	}
+
+	&__input-wrap {
+		position: relative;
+	}
+
+	&__label {
+		opacity: 0;
+		padding: .5rem 1rem;
+
+		font-size: $form-size--label;
+		border-radius: 0 0 1rem 1rem;
+		width: $input-size;
+		line-height: 1;
+		font-weight: bold;
+		text-align: center;
+
+		background-color: lighten($form-alert-color, 40%);
+		margin-right: 1rem;
+
+		position: absolute;
+		top: 2.6rem;
+		left: 0;
+
+		color: $form-alert-color;
+
+		overflow: hidden;
+		word-wrap: break-word;
+
+		transition: opacity .5s ease-in-out;
+	}
+
+	.label--error {
+		opacity: 1;
+	}
+}

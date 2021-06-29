@@ -1,11 +1,3 @@
 .subs-form {
 	@include form-submit($form-color--subs, 21rem);
-
-	input:invalid {
-		border: 2px dashed red;
-	}
-
-	input:invalid {
-		border: 2px solid black;
-	}
 }

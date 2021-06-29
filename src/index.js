@@ -4,6 +4,7 @@ import Slider from './assets/modules/slider'
 import Tabs from './assets/modules/tabs'
 import Navigation from './assets/modules/navigation'
 import ModalSlider from './assets/modules/modal-slider'
+import * as $ from'jquery'  
 
 /********* new Slider($1, $2, $3)
 $1 [string] - slider block
@@ -45,31 +46,78 @@ new ModalSlider('#modal-slider', '#main-slider').init()
 
 // Todo lazy lodaing for js scripts
 
-// const submitFrms = [
-// 	document.body.querySelector('.subs-form'),
-// 	document.body.querySelector('.login-form')
-// ]
-
-
-// submitFrms.forEach(form => {
-// 	form.addEventListener('submit', (event) => {
-
-// 		event.preventDefault();
-		
-// 		const textField = form.querySelector('input[type=text]')
-// 		const passField = form.querySelector('input[type=password]')
-
-
-// 		const nameReg = /^[a-z]{2,10}$/i
-// 		const passReg = /^[\w\d-_!@$&()]{2,12}$/i
-// 		const email = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/i
-
-// 		nameReg.test(textField.value)
-// 		passReg.test(passField.value)
 
 
 
+const submitFrms = [
+	document.body.querySelector('.subs-form'),
+	document.body.querySelector('.login-form')
+]
 
-// 	})
-// })
+const regPatternts = {
+	name: /^[a-z]{2,10}$/i,
+	pass: /^[\w\d-_!@$&]{8,20}$/i,
+	email: /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/i
+}
 
+const regMsgs = {
+	name: 'Name must contain: 2-10 characters',
+	pass: 'Password must contain: 8-20 characters (you can use: -_!@$&)',
+	email: 'Invalid  e-mail address'
+}
+
+function showFormInputError(form, input, inputType) {
+	const label = form.querySelector(`label[for='${input.getAttribute('name')}']`)
+	label.innerText = regMsgs[inputType]
+	
+	label.classList.add('label--error')
+
+	setTimeout(() => {
+		hideFormInputError(form)
+	}, 2000)
+}
+
+function hideFormInputError(form) {
+	const labels = form.querySelectorAll('label')
+
+	labels.forEach(label => {
+		label.classList.remove('label--error')
+		setTimeout(() => {
+			label.innerText = ''
+		}, 500)
+	})
+}
+
+function validateForm(form) {
+	const fields = {
+		name: form.querySelector('input[type=text]'),
+		pass: form.querySelector('input[type=password]'),
+		email: form.querySelector('input[type=email]')
+	}
+
+	for (const field in fields) {
+		if (fields[field]) {
+			if (!regPatternts[field].test(fields[field].value)) {
+				showFormInputError(form, fields[field], field)
+			}
+		}
+	}
+}
+
+submitFrms.forEach(form => {
+	form.addEventListener('submit', (event) => {
+		event.preventDefault();
+
+	$.ajax({
+		type: "POST",
+		url: "/static/mail.php",
+		data: $(form).serialize(),
+		success: function(data) {
+			console.log('data:', data)
+				// $("#wdh_result_form").html(data);
+		}
+	});
+
+		// validateForm(form)
+	})
+})
