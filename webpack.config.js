@@ -20,9 +20,9 @@ const cssLoaders = extra => {
 	return loaders
 }
 
-const imagePath = isProduction => {
-	const generator = !isProduction ? {} : {
-		publicPath: '/dist/',
+const imagePath = () => {
+	const generator = {
+		publicPath: isProduction ? '/' : '/dist/',
 		filename: 'static/images/[name][ext]'
 	}
 	return generator
