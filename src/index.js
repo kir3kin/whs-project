@@ -43,31 +43,33 @@ init() [func] - to active modal window for main slider
 new ModalSlider('#modal-slider', '#main-slider').init()
 
 
-const submitFrms = [
-	document.body.querySelector('.subs-form'),
-	document.body.querySelector('.login-form')
-]
+// Todo lazy lodaing for js scripts
+
+// const submitFrms = [
+// 	document.body.querySelector('.subs-form'),
+// 	document.body.querySelector('.login-form')
+// ]
 
 
-submitFrms.forEach(form => {
-	form.addEventListener('submit', (event) => {
+// submitFrms.forEach(form => {
+// 	form.addEventListener('submit', (event) => {
 
-		event.preventDefault();
+// 		event.preventDefault();
 		
-		const textField = form.querySelector('input[type=text]')
-		const passField = form.querySelector('input[type=password]')
+// 		const textField = form.querySelector('input[type=text]')
+// 		const passField = form.querySelector('input[type=password]')
 
 
-		const nameReg = /^[a-z]{2,10}$/i
-		const passReg = /^[\w\d-_!@$&()]{2,12}$/i
-		const email = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/i
+// 		const nameReg = /^[a-z]{2,10}$/i
+// 		const passReg = /^[\w\d-_!@$&()]{2,12}$/i
+// 		const email = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9-]+(?:\.[a-z0-9-]+)*$/i
 
-		nameReg.test(textField.value)
-		passReg.test(passField.value)
-
-
+// 		nameReg.test(textField.value)
+// 		passReg.test(passField.value)
 
 
-	})
-})
+
+
+// 	})
+// })
 
