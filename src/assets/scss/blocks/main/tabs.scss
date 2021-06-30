@@ -10,6 +10,7 @@
 
 	&__column {
 		flex: 0 0 25%;
+		max-width: 25%;
 	}
 
 	&__body {
@@ -21,6 +22,20 @@
 		z-index: 1;
 
 		transition: height .4s ease-in-out;
+	}
+
+	@include breakpoint($screen-sm) {
+		&__btns {
+			flex-flow: column;
+		}
+		
+		&__column {
+			max-width: 100%;
+		}
+
+		&__body {
+			box-shadow: inset 0 0 5px 1px rgba(0,0,0, .2);
+		}
 	}
 }
 
@@ -34,7 +49,8 @@
 	margin-bottom: -3px;
 	cursor: pointer;
 	height: 28.1rem;
-	border-bottom: 3.5px solid transparent !important;
+	border-bottom: 3.5px solid transparent;
+	overflow: hidden;
 
 	position: relative;
 	z-index: 2;
@@ -43,6 +59,11 @@
 
 	&__icon {
 		margin-bottom: 1.5rem;
+		
+		img {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	&__title {
@@ -67,15 +88,87 @@
 	&--active,
 	&--active:hover {
 		border: 2px solid $tab-border-color;
-		border-bottom: 3.5px solid #fff !important;
+		border-bottom: 3.5px solid #fff;
 		box-shadow: none;
 		cursor: default;
 
 		.tab-btn__title {
 			color: $main-color--tabs;
-			font-size: 2.2rem;
+			font-size: $tab-size--btn-active;
 			text-shadow: 1px 1px 2px rgba(0,0,0, .4);
 		}
+	}
+
+	@include breakpoint($screen-lg) {
+		padding: 1.5rem 2rem 2rem;
+
+		&__icon {
+			width: 12rem;
+			height: 13rem;
+			overflow: hidden;
+			margin: 0 auto 1.5rem;
+		}
+	
+
+		&__title {
+			font-size: $lg-tab-size--btn;
+		}
+
+		&--active,
+		&--active:hover {
+			.tab-btn__title {
+				font-size: $lg-tab-size--btn-active;
+			}
+		}
+	}
+
+	@include breakpoint($screen-md) {
+		padding: 1rem;
+		height: 20rem;
+		justify-content: flex-start;
+
+		&__icon {
+			width: 8rem;
+			height: 9rem;
+		}
+
+		&__title {
+			font-size: $md-tab-size--btn;
+		}
+	}
+
+	@include breakpoint($screen-sm) {
+		height: auto;
+		flex-flow: row;
+		border: 2px solid $tab-border-color;
+		
+		&__icon {
+			width: 5rem;
+			height: 5rem;
+			margin: 0 0 0 1rem;
+		}
+		
+		&__title {
+			width: 100%;
+			font-size: $sm-tab-size--btn;
+		}
+		
+		&:hover {
+			box-shadow: none;
+			border: 2px solid $tab-border-color;
+		}
+		
+		// active tab buttons
+		&--active,
+		&--active:hover {
+			box-shadow: inset 0 0 10px 2px rgba(0,0,0, .2);
+			border-bottom: 2px solid $tab-border-color;
+
+			.tab-btn__title {
+				font-size: $sm-tab-size--btn-active;
+			}
+		}
+
 	}
 }
 
@@ -109,11 +202,48 @@
 		line-height: 1;
 	}
 
-	&__text p {
+	&__text p:not(:last-child) {
 		margin-bottom: 2rem;
 	}
 
 	&--active {
 		opacity: 1;
+	}
+
+	@include breakpoint($screen-lg) {
+		padding: 3rem;
+
+		&__title {
+			font-size: $lg-tab-size--header;
+		}
+	}
+
+	@include breakpoint($screen-md) {
+		padding: 2rem;
+
+		&__img {
+			margin-bottom: 2.5rem;
+			width: 100%;
+			height: 100%;
+		}
+
+		&__title {
+			line-height: 1.2;
+			padding: 0 1rem;
+			font-size: $md-tab-size--header;
+		}
+	}
+
+	@include breakpoint($screen-sm) {
+		&__img {
+			margin-bottom: 2.5rem;
+			width: 100%;
+			height: 100%;
+		}
+
+		&__title {
+			font-size: $sm-tab-size--header;
+			text-align: center;
+		}
 	}
 }

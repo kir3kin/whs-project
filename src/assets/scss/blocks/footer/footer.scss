@@ -16,4 +16,28 @@
 	&__about:first-child {
 		margin-left: 3.5rem;
 	}
+
+	@include breakpoint($screen-md) {
+		&__body {
+			padding: 0;
+		}
+	}
+
+	@include breakpoint($screen-md) {
+		&__body {
+			flex-wrap: wrap;
+			justify-content: space-around;
+			font-size: $md-footer-size--list;
+
+			> div {
+				flex: 1 1 auto;
+				margin: 2rem;
+				text-align: center;
+			}
+		}
+
+		&__about:first-child {
+			margin-left: 2rem;
+		}
+	}
 }

@@ -8,4 +8,29 @@
 		justify-content: space-between;
 		padding: 2rem 0 3rem;
 	}
+
+	@include breakpoint($screen-lg) {
+		margin-top: 2rem;
+		
+		&__forms {
+			flex-flow: column;
+			justify-content: space-between;
+			align-items: center;
+			padding: 4rem 0;
+
+			form:not(:last-child) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+	
+	@include breakpoint($screen-md) {
+		&__forms {
+			padding: 2rem;
+			
+			form:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
 }

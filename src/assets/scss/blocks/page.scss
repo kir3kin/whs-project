@@ -16,7 +16,7 @@ body {
 
 
 	@include breakpoint($screen-lg) {
-		max-width: 760px;
+		max-width: 740px;
 	}
 
 	@include breakpoint($screen-md) {
