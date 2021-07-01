@@ -9,6 +9,10 @@ export default class Tabs {
 			unRecognised: 'Unrecognised error has occurred'
 		}
 		this.tabIndex = this.validateTabIndex(tabIndex)
+
+		// When we change tab content size
+		this.windowSizes = [991, 768, 480]
+		this.windowStage = 0
 	}
 
 	error(typeError) {
@@ -44,13 +48,32 @@ export default class Tabs {
 		})
 	}
 
-	changeTabContent(btn) {
-		this.resetTabContent()
+	changeTabContent(btn, checkSize = false) {
 		
-		const currentTab = this.tab.querySelector(`[data-tab=${btn.getAttribute('id')}]`)
-		this.tabBody.style.height = `${currentTab.clientHeight}px`
-		currentTab.classList.add('tab-context--active')
+		if (!btn && checkSize) {
+			const currentTab = this.tab.querySelector('.tab-context--active')
+			this.tabBody.style.height = `${currentTab.clientHeight}px`
+		} else {
+			this.resetTabContent()
+			const currentTab = this.tab.querySelector(`[data-tab=${btn.getAttribute('id')}]`)
+			// change tab body size according to current tab content
+			this.tabBody.style.height = `${currentTab.clientHeight}px`
+			currentTab.classList.add('tab-context--active')
+		}
 	}
+	
+	checkWindowSize() {
+		window.addEventListener('resize', () => {
+			const result = this.windowSizes.filter(size => size > window.innerWidth)
+			
+			// if window size is below 480 - we resize tab body size every resize event
+			if ((this.windowStage !== result.length) || (this.windowStage === this.windowSizes.length)) {
+				this.windowStage = result.length
+				this.changeTabContent(false, true)
+			}
+		})
+	}
+
 
 	init() {
 		this.tabBtns.forEach((btn, index) => {
@@ -66,5 +89,8 @@ export default class Tabs {
 				btn.click()
 			}
 		})
+
+		// to change tab body size
+		this.checkWindowSize()
 	}
 }

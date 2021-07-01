@@ -1,11 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MinimazierCssPlugin = require('css-minimizer-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV === 'production'
 const isServe = process.env.NODE_ENV === 'serve'
+
+
 
 const cssLoaders = extra => {
 	const loaders = [
@@ -14,7 +17,6 @@ const cssLoaders = extra => {
 		},
 		'css-loader'
 	]
-
 	if (extra) loaders.push(extra)
 	return loaders
 }
@@ -22,7 +24,7 @@ const cssLoaders = extra => {
 const imagePath = () => {
 	const generator = {
 		publicPath: isServe ? '' : isProduction ? '/' : '/dist/',
-		filename: 'static/images/[name][ext]'
+		filename: 'static/images/[contenthash][ext]'
 	}
 	return generator
 }
@@ -33,7 +35,7 @@ const config = {
 	},
 	output: {
 		filename: 'static/js/[name].js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist')
 	},
 	resolve: {
 		extensions: ['.js', '.json', '.css', '.scss'],
@@ -41,7 +43,7 @@ const config = {
 			images: path.resolve(__dirname, 'src/assets/images')
 		}
 	},
-	devtool: 'source-map',
+	devtool: isProduction ? false : 'source-map',
 	devServer: {
 			open: true,
 			port: 7373,
@@ -52,16 +54,8 @@ const config = {
 			new HtmlWebpackPlugin({
 				template: './src/index.html',
 			}),
-			new CopyWebpackPlugin({
-				patterns: [
-					{
-						from: path.resolve(__dirname, 'src/assets/mail.php'),
-						to: path.resolve(__dirname, 'dist/static/')
-					}
-				]
-			}),
 			new MiniCssExtractPlugin({
-				filename: 'static/styles/main.css'
+				filename: 'static/styles/[contenthash].css'
 			}),
 			new CleanWebpackPlugin()
 	],
@@ -91,7 +85,7 @@ const config = {
 				options: {
 					name: '[contenthash].[ext]',
 					outputPath: 'static/fonts',
-					publicPath: '/dist/static/fonts/'
+					publicPath: 'static/fonts/'
 				}
 			}
 		],

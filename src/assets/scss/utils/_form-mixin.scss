@@ -34,6 +34,8 @@
 		background-color: $btn-lf;
 		color: $header-color;
 		transition: .2s linear;
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 		&:focus,
 		&:hover {
@@ -74,5 +76,71 @@
 
 	.label--error {
 		opacity: 1;
+	}
+
+	@include breakpoint($screen-lg) {
+		max-width: 100%;
+		width: 40rem;
+		padding: 1.5rem 3rem 2rem;
+		
+		
+		&__header {
+			font-size: $lg-form-size--header;
+			text-align: center;
+		}
+	}
+
+	@include breakpoint($screen-sm) {
+		width: 100%;
+		min-width: 100%;
+
+		&__header {
+			white-space: normal;
+			font-size: $sm-form-size--header;
+		}
+
+		&__content {
+			flex-flow: column;
+			align-items: center;
+		}
+
+		&__name, &__pass, &__email {
+			width: 100%;
+			margin-right: 0;
+			text-align: center;
+		}
+
+		&__input-wrap:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+
+		&__submit {
+			width: 50%;
+			border-radius: 1rem;
+		}
+
+		&__input-wrap {
+			width: 20rem;
+			display: flex;
+			flex-flow: column-reverse;
+		}
+
+		&__label {
+			line-height: 1.2;
+			width: 100%;
+			padding: 0;
+			z-index: 2;
+			position: relative;
+			top: 0;
+			height: 0;
+			margin-right: 0;
+
+			transition: .3s linear;
+		}
+
+		.label--error {
+			height: 100%;
+			padding: 1rem;
+		}
 	}
 }

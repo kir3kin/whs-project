@@ -12,4 +12,10 @@
 	&__item:last-child {
 		margin-bottom: 0;
 	}
+
+	@include breakpoint($screen-md) {
+		&__title {
+			font-size: $md-footer-size--header;
+		}
+	}
 }

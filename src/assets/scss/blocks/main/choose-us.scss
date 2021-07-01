@@ -14,6 +14,38 @@
 	&__list {
 		margin-left: 4rem;
 	}
+
+	@include breakpoint($screen-lg) {
+		align-items: center;
+
+		&__img {
+			width: 30rem;
+			height: 22rem;
+		}
+			
+		&__list {
+			margin-left: 3rem;
+		}
+	}
+	
+	@include breakpoint($screen-md) {
+		justify-content: center;
+		flex-flow: column-reverse;
+		
+		&__list {
+			margin-left: 0;
+		}
+	}
+
+	@include breakpoint($screen-sm) {
+		padding: 1rem 2rem;
+
+		&__img {
+			width: 100%;
+			height: auto;
+			
+		}
+	}
 }
 
 .list {
@@ -28,7 +60,6 @@
 
 	&__item {
 		font-size: $choose-size--txt;
-
 		position: relative;
 		padding-left: 2.5rem;
 		margin-bottom: 1rem;
@@ -55,4 +86,31 @@
 			background-repeat: no-repeat;
 		}
 	}
+
+	@include breakpoint($screen-lg) {
+		padding: 2rem 0;
+		
+		&__header {
+			font-size: $lg-choose-size--header;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	@include breakpoint($screen-md) {
+		width: 100%;
+		padding: 0 0 2rem 0;
+		text-align: center;
+		
+		&__item {
+			display: inline-block;
+			max-width: 100%;
+			font-size: $md-choose-size--txt;
+		}
+		
+		&__header {
+			font-size: $md-choose-size--header;
+			text-align: center
+		}
+	}
+
 }

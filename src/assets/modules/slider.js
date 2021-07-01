@@ -6,27 +6,18 @@ export default class Slider {
 		this.activeBtns = true
 
 		this.slideIndex = (slideIndex <= 1) ? 1 : (this.slideIndex >= this.slidesCount) ? this.slidesCount : slideIndex
+
+		this.leftBtn = this.slider.querySelector(`${this.sliderSelector}-btn-left`)
+		this.rightBtn = this.slider.querySelector(`${this.sliderSelector}-btn-right`)
+		this.sliderWrap = this.slider.querySelector(`${this.sliderSelector}-wrap`)
+		this.slidesCount = this.sliderWrap.querySelectorAll('[data-slider=slider-slide]').length
+		this.slideWidth = this.sliderWrap.clientWidth
+
+		// When we change slider size
+		this.windowSizes = [991, 768, 480]
+		this.windowStage = 0
 	}
 
-	get leftBtn() {
-		return this.slider.querySelector(`${this.sliderSelector}-btn-left`)
-	}
-
-	get rightBtn() {
-		return this.slider.querySelector(`${this.sliderSelector}-btn-right`)
-	}
-
-	get sliderWrap() {
-		return this.slider.querySelector(`${this.sliderSelector}-wrap`)
-	}
-
-	get slidesCount() {
-		return this.sliderWrap.querySelectorAll('[data-slider=slider-slide]').length
-	}
-
-	get slideWidth() {
-		return this.sliderWrap.clientWidth
-	}
 
 	changeIndex(direct) {
 		if (!this.activeBtns) return
@@ -75,10 +66,22 @@ export default class Slider {
 		this.rightBtn.addEventListener('click', () => this.changeIndex('right'))
 	}
 
+	checkWindowSize() {
+		window.addEventListener('resize', () => {
+			const result = this.windowSizes.filter(size => size > window.innerWidth)
+			if (this.windowStage !== result.length) {
+				this.windowStage = result.length
+				this.slideWidth = this.sliderWrap.clientWidth
+				this.init()
+			}
+		})
+	}
+
 	init() {
 		if (this.slideIndex !== 1) this.changeSlide(true)
 		//* set slider speed after the slider's change 
 		setTimeout(() => this.setSliderSpeed(), 0)
 		this.activeCtrlBtns()
+		this.checkWindowSize()
 	}
 }
