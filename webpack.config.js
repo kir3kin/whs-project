@@ -1,9 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const MinimazierCssPlugin = require('css-minimizer-webpack-plugin')
-const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV === 'production'
 const isServe = process.env.NODE_ENV === 'serve'
@@ -56,6 +55,14 @@ const config = {
 			}),
 			new MiniCssExtractPlugin({
 				filename: 'static/styles/[contenthash].css'
+			}),
+			new CopyWebpackPlugin({
+				patterns: [
+					{
+						from: path.resolve(__dirname, './src/assets/robots.txt'),
+						to: path.resolve(__dirname, 'dist/')
+					}
+				]
 			}),
 			new CleanWebpackPlugin()
 	],
