@@ -37,7 +37,7 @@ export default class FormValidation {
 	
 	validateForm() {
 		const fields = {
-			name: this.form.querySelectorAll('input[type=text]'),
+			name: this.form.querySelectorAll('input[type=text], input:not([type])'),
 			pass: this.form.querySelectorAll('input[type=password]'),
 			email: this.form.querySelectorAll('input[type=email]')
 		}

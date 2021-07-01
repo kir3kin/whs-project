@@ -92,7 +92,7 @@ const config = {
 				options: {
 					name: '[contenthash].[ext]',
 					outputPath: 'static/fonts',
-					publicPath: 'static/fonts/'
+					publicPath: '/static/fonts/'
 				}
 			}
 		],
