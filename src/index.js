@@ -43,7 +43,6 @@ init() [func] - to active modal window for main slider
 *********/
 new ModalSlider('#modal-slider', '#main-slider').init()
 
-
 const forms = ['.subs-form', '.login-form']
 for (const form of forms) {
 	/********* new ModalSlider($1, $2, $3)
