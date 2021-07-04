@@ -31,7 +31,7 @@ const config = {
 		index: './src/index.js'
 	},
 	output: {
-		filename: 'static/js/[name].js',
+		filename: 'static/js/[contenthash].js',
 		path: path.resolve(__dirname, 'dist')
 	},
 	resolve: {
