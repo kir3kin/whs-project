@@ -45,7 +45,7 @@ new ModalSlider('#modal-slider', '#main-slider').init()
 
 const forms = ['.subs-form', '.login-form']
 for (const form of forms) {
-	/********* new ModalSlider($1, $2, $3)
+	/********* new ModalSlider($1)
 	$1 [string] - form
 	init() [func] - to active form validation
 	*********/

@@ -7,8 +7,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const isProduction = process.env.NODE_ENV === 'production'
 const isServe = process.env.NODE_ENV === 'serve'
 
-
-
 const cssLoaders = extra => {
 	const loaders = [
 		{ 
