@@ -1,6 +1,5 @@
 // SCSS
 import './assets/scss/styles'
-import Slider from './assets/modules/slider'
 import Tabs from './assets/modules/tabs'
 import Navigation from './assets/modules/navigation'
 import ModalSlider from './assets/modules/modal-slider'
@@ -12,8 +11,10 @@ $2 [number] - active slide
 $3 [number][ms] - switch's speed
 init() [func] - to active slider
 *********/
-new Slider('#main-slider', 2, 2000).init()
-new Slider('#text-slider', 3, 1000).init()
+import('./assets/modules/slider').then(sliderContainer => {
+	new sliderContainer.Slider('#main-slider', 2, 2000).init()
+	new sliderContainer.Slider('#text-slider', 3, 1000).init()
+})
 
 /********* new Tabs($1, $2)
 $1 [string] - tab block
@@ -51,4 +52,3 @@ for (const form of forms) {
 	*********/
 	new FormValidation(form).init()
 }
-// Todo lazy lodaing for js scripts

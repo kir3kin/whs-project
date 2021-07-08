@@ -1,4 +1,4 @@
-export default class Slider {
+export class Slider {
 	constructor(sliderSelector, slideIndex = 1, sliderSpeed = 500) {
 		this.sliderSelector = sliderSelector
 		this.slider = document.querySelector(this.sliderSelector);
