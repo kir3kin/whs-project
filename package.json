@@ -1,7 +1,8 @@
 {
+  "author": "Ihor Akhabanin <i.akhabanin@gmail.com>",
+  "description": "My WHS project",
   "name": "whs-project",
   "version": "1.0.0",
-  "description": "My WHS project",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --node-env=development",
@@ -9,7 +10,6 @@
     "watch": "webpack --watch",
     "serve": "webpack serve --open --node-env=serve"
   },
-  "author": "Ihor Akhabanin <i.akhabanin@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.6",
